@@ -1,44 +1,29 @@
 package exam_class_extends;
 
-public class Employee {
-    private String name;
-    private String address;
-    private String phoneNumber;
-    private int salary;
+public class Employee extends Person {
+    private String departmentName;
 
-    public String getName() {
-        return name;
+    Employee () {
+        super();
+        System.out.println("Employee 생성자 호출");
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Employee(String name, int age, String departmentName) {
+        super(name, age);
+        this.departmentName = departmentName;
+        System.out.println("Employee(name, age, depart) 생성자 호출");
     }
 
-    public String getAddress() {
-        return address;
+    public String getDepartmentName() {
+        return departmentName;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
+    @Override
     public String toString() {
-        return "사원명 = " + name + ", 사원주소 = " + address + ", 전화번호: " + phoneNumber + ", 급여 = " + salary;
+        return super.toString() + " : " + getDepartmentName();
     }
 }

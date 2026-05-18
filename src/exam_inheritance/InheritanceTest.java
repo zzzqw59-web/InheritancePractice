@@ -1,5 +1,7 @@
 package exam_inheritance;
 
+import exam_class_extends.Professor;
+
 public class InheritanceTest {
     static void main(String[] args) {
         Employee employee = new Employee();
