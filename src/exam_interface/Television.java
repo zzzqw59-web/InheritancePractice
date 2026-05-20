@@ -27,7 +27,7 @@ public class Television implements RemoteControl{
         }
     }
 
-    public void printChannel() {
+    public void printChannel(int channel) {
         System.out.println("현재 채널은 " + channel + "번입니다.");
     }
 
