@@ -1,6 +1,7 @@
 package exam_collection_list;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ArrayListTest {
     static void main(String[] args) {
@@ -98,8 +99,15 @@ public class ArrayListTest {
         movie.add(new Movie("어벤져스", "8.7", "안소리 루소", 2019));
         movie.add(new Movie("라라랜드", "8.8", "데이미언 셔젤", 2016));
 
-        for (int i = 0; i < movie.size(); i++) {
+        ArrayList<Integer> list4 = new ArrayList<>();
+        list4.add(10);
+        list4.add(20);
 
-        }
+//        int max = Collections.max(list4);
+//        list4.remove(max);
+//        System.out.println(list4);
+
+        list4.remove(Collections.max(list4));
+        System.out.println(list4);
     }
 }
