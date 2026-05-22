@@ -1,0 +1,17 @@
+package exam_collection_set;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class HashSetExample03 {
+    static void main(String[] args) {
+        Set<Member> set = new HashSet<>();
+
+        set.add(new Member("홍길동", 50));
+        set.add(new Member("홍길동", 50));
+        set.add(new Member("김희진", 36));
+
+        System.out.println("총 객체 수: " + set.size());
+        System.out.println(set);
+    }
+}
